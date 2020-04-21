@@ -1,0 +1,708 @@
+<!DOCTYPE html><html><head>
+2
+      <title>requirements</title>
+3
+      <meta charset="utf-8">
+4
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+5
+
+6
+      <link rel="stylesheet" href="file:///C:\Users\kawaguch\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.3.11\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+      <style> 
+18
+      /**
+19
+ * prism.js Github theme based on GitHub's theme.
+20
+ * @author Sam Clarke
+21
+ */
+22
+code[class*="language-"],
+23
+pre[class*="language-"] {
+24
+  color: #333;
+25
+  background: none;
+26
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+27
+  text-align: left;
+28
+  white-space: pre;
+29
+  word-spacing: normal;
+30
+  word-break: normal;
+31
+  word-wrap: normal;
+32
+  line-height: 1.4;
+33
+34
+  -moz-tab-size: 8;
+35
+  -o-tab-size: 8;
+36
+  tab-size: 8;
+37
+38
+  -webkit-hyphens: none;
+39
+  -moz-hyphens: none;
+40
+  -ms-hyphens: none;
+41
+  hyphens: none;
+42
+}
+43
+44
+/* Code blocks */
+45
+pre[class*="language-"] {
+46
+  padding: .8em;
+47
+  overflow: auto;
+48
+  /* border: 1px solid #ddd; */
+49
+  border-radius: 3px;
+50
+  /* background: #fff; */
+51
+  background: #f5f5f5;
+52
+}
+53
+54
+/* Inline code */
+55
+:not(pre) > code[class*="language-"] {
+56
+  padding: .1em;
+57
+  border-radius: .3em;
+58
+  white-space: normal;
+59
+  background: #f5f5f5;
+60
+}
+61
+62
+.token.comment,
+63
+.token.blockquote {
+64
+  color: #969896;
+65
+}
+66
+67
+.token.cdata {
+68
+  color: #183691;
+69
+}
+70
+71
+.token.doctype,
+72
+.token.punctuation,
+73
+.token.variable,
+74
+.token.macro.property {
+75
+  color: #333;
+76
+}
+77
+78
+.token.operator,
+79
+.token.important,
+80
+.token.keyword,
+81
+.token.rule,
+82
+.token.builtin {
+83
+  color: #a71d5d;
+84
+}
+85
+86
+.token.string,
+87
+.token.url,
+88
+.token.regex,
+89
+.token.attr-value {
+90
+  color: #183691;
+91
+}
+92
+93
+.token.property,
+94
+.token.number,
+95
+.token.boolean,
+96
+.token.entity,
+97
+.token.atrule,
+98
+.token.constant,
+99
+.token.symbol,
+100
+.token.command,
+101
+.token.code {
+102
+  color: #0086b3;
+103
+}
+104
+105
+.token.tag,
+106
+.token.selector,
+107
+.token.prolog {
+108
+  color: #63a35c;
+109
+}
+110
+111
+.token.function,
+112
+.token.namespace,
+113
+.token.pseudo-element,
+114
+.token.class,
+115
+.token.class-name,
+116
+.token.pseudo-class,
+117
+.token.id,
+118
+.token.url-reference .token.variable,
+119
+.token.attr-name {
+120
+  color: #795da3;
+121
+}
+122
+123
+.token.entity {
+124
+  cursor: help;
+125
+}
+126
+127
+.token.title,
+128
+.token.title .token.punctuation {
+129
+  font-weight: bold;
+130
+  color: #1d3e81;
+131
+}
+132
+133
+.token.list {
+134
+  color: #ed6a43;
+135
+}
+136
+137
+.token.inserted {
+138
+  background-color: #eaffea;
+139
+  color: #55a532;
+140
+}
+141
+142
+.token.deleted {
+143
+  background-color: #ffecec;
+144
+  color: #bd2c00;
+145
+}
+146
+147
+.token.bold {
+148
+  font-weight: bold;
+149
+}
+150
+151
+.token.italic {
+152
+  font-style: italic;
+153
+}
+154
+155
+156
+/* JSON */
+157
+.language-json .token.property {
+158
+  color: #183691;
+159
+}
+160
+161
+.language-markup .token.tag .token.punctuation {
+162
+  color: #333;
+163
+}
+164
+165
+/* CSS */
+166
+code.language-css,
+167
+.language-css .token.function {
+168
+  color: #0086b3;
+169
+}
+170
+171
+/* YAML */
+172
+.language-yaml .token.atrule {
+173
+  color: #63a35c;
+174
+}
+175
+176
+code.language-yaml {
+177
+  color: #183691;
+178
+}
+179
+180
+/* Ruby */
+181
+.language-ruby .token.function {
+182
+  color: #333;
+183
+}
+184
+185
+/* Markdown */
+186
+.language-markdown .token.url {
+187
+  color: #795da3;
+188
+}
+189
+190
+/* Makefile */
+191
+.language-makefile .token.symbol {
+192
+  color: #795da3;
+193
+}
+194
+195
+.language-makefile .token.variable {
+196
+  color: #183691;
+197
+}
+198
+199
+.language-makefile .token.builtin {
+200
+  color: #0086b3;
+201
+}
+202
+203
+/* Bash */
+204
+.language-bash .token.keyword {
+205
+  color: #0086b3;
+206
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+207
+/* Please visit the URL below for more information: */
+208
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+209
+.markdown-preview.markdown-preview {
+210
+  font-family: "Lucida Grande", Meiryo, sans-serif;
+211
+}
+212
+.markdown-preview.markdown-preview h1 {
+213
+  counter-reset: h2counter;
+214
+}
+215
+.markdown-preview.markdown-preview h2 {
+216
+  counter-increment: h2counter;
+217
+  counter-reset: h3counter;
+218
+}
+219
+.markdown-preview.markdown-preview h3 {
+220
+  counter-increment: h3counter;
+221
+  counter-reset: h4counter;
+222
+}
+223
+.markdown-preview.markdown-preview h4 {
+224
+  counter-increment: h4counter;
+225
+}
+226
+.markdown-preview.markdown-preview h2:before {
+227
+  content: counter(h2counter) ". ";
+228
+}
+229
+.markdown-preview.markdown-preview h3:before {
+230
+  content: counter(h2counter) ". " counter(h3counter) ". ";
+231
+}
+232
+.markdown-preview.markdown-preview h4:before {
+233
+  content: counter(h2counter) ". " counter(h3counter) ". " counter(h4counter) ". ";
+234
+}
+235
+.markdown-preview.markdown-preview table {
+236
+  width: 90%;
+237
+}
+238
+.markdown-preview.markdown-preview th,
+239
+.markdown-preview.markdown-preview td {
+240
+  word-break: break-all;
+241
+}
+242
+@media print {
+243
+  .markdown-preview.markdown-preview {
+244
+    font-family: "Lucida Grande", Meiryo, sans-serif;
+245
+  }
+246
+}
+247
+.markdown-preview.markdown-preview .reveal .slides p,
+248
+.markdown-preview.markdown-preview .reveal .slides ol,
+249
+.markdown-preview.markdown-preview .reveal .slides li,
+250
+.markdown-preview.markdown-preview .reveal .slides h1,
+251
+.markdown-preview.markdown-preview .reveal .slides h2,
+252
+.markdown-preview.markdown-preview .reveal .slides h3,
+253
+.markdown-preview.markdown-preview .reveal .slides h4,
+254
+.markdown-preview.markdown-preview .reveal .slides h5,
+255
+.markdown-preview.markdown-preview .reveal .slides h6 {
+256
+  text-transform: none;
+257
+  text-align: left;
+258
+}
+259
+.markdown-preview.markdown-preview .reveal .slides h2:before,
+260
+.markdown-preview.markdown-preview .reveal .slides h3:before,
+261
+.markdown-preview.markdown-preview .reveal .slides h4:before,
+262
+.markdown-preview.markdown-preview .reveal .slides h5:before,
+263
+.markdown-preview.markdown-preview .reveal .slides h6:before {
+264
+  content: "";
+265
+}
+266
+ 
+267
+      </style>
+268
+    </head>
+269
+    <body for="html-export">
+270
+      <div class="mume markdown-preview   ">
+271
+      <h1 class="mume-header" id="4-requirements">4. Requirements</h1>
+272
+
+273
+<h2 class="mume-header" id="principles">Principles</h2>
+274
+
+275
+<ul>
+276
+<li>WoT architecture should enable mutual interworking of different eco-systems using web technology.</li>
+277
+<li>WoT architecture should be based on the web architecture using RESTful APIs.</li>
+278
+<li>WoT architecture should allow to use multiple payload formats which are commonly used in the web.</li>
+279
+</ul>
+280
+<h2 class="mume-header" id="thing-functionalities">Thing functionalities</h2>
+281
+
+282
+<ul>
+283
+<li>WoT architecture should allow thing&apos;s to have functionalities such as
+284
+<ul>
+285
+<li>reading thing&apos;s status information</li>
+286
+<li>updating thing&apos;s status information which might cause actuation</li>
+287
+<li>subscribing to, receiving and unsubscribing to the notification of the change of thing&apos;s status information.</li>
+288
+<li>invoking functions with input and output parameters which would cause certain actuation or calculation.</li>
+289
+<li>subscribing to, receiving and unsubscribing to the notification which does not directly relate to thing&apos;s status information.</li>
+290
+</ul>
+291
+</li>
+292
+</ul>
+293
+<h2 class="mume-header" id="search-and-discovery">Search and discovery</h2>
+294
+
+295
+<ul>
+296
+<li>WoT architecture should allow clients to know thing&apos;s attributes, functionalities and their access points, prior to access to the thing itself.</li>
+297
+<li>WoT architecture should allow clients to search things by its attributes and functionalities.</li>
+298
+<li>WoT architecture should allow semantic search of its functionalities based on unified vocabulary, regardless of naming of its functionalities.</li>
+299
+</ul>
+300
+<h2 class="mume-header" id="description-mechanism">Description mechanism</h2>
+301
+
+302
+<ul>
+303
+<li>WoT architecture should support common description mechanism which enables describing things and their functions.</li>
+304
+<li>Such description should be not only human-readable, but also machine-readable.</li>
+305
+<li>Such description should allow semantic annotation of its structure and described contents.</li>
+306
+<li>Such description should be able to be exchanged using multiple formats which are commonly used in the web.</li>
+307
+</ul>
+308
+<h2 class="mume-header" id="description-of-attributes">Description of attributes</h2>
+309
+
+310
+<ul>
+311
+<li>WoT architecture should allow describing thing&apos;s attributes such as
+312
+<ul>
+313
+<li>name</li>
+314
+<li>explanation</li>
+315
+<li>version of spec, format and description itself</li>
+316
+<li>links to other related things and information</li>
+317
+</ul>
+318
+</li>
+319
+<li>Such description should support internationalization.</li>
+320
+</ul>
+321
+<h2 class="mume-header" id="description-of-functionalities">Description of functionalities</h2>
+322
+
+323
+<ul>
+324
+<li>WoT architecture should allow describing thing&apos;s functionalities which is shown in ## Thing functionalities</li>
+325
+</ul>
+326
+<h2 class="mume-header" id="network">Network</h2>
+327
+
+328
+<ul>
+329
+<li>WoT architecture should support multiple web protocols which are commonly used.</li>
+330
+<li>Such protocols include 1)protocols commonly used in the internet and 2)protocols commonly used in the local area network</li>
+331
+<li>WoT architecture should allow using multiple web protocols to access to the same functionality.</li>
+332
+<li>WoT architecture should allow using mixture of multiple protocols to the functionalities of the same thing (e.g. HTTP and WebSocket).</li>
+333
+</ul>
+334
+<h2 class="mume-header" id="deployment">Deployment</h2>
+335
+
+336
+<ul>
+337
+<li>WoT architecture should support wide variety of thing capability such as edge devices with resource restrictions and virtual things on the cloud, based on the same model.</li>
+338
+<li>WoT architecture should support multiple levels of thing hierarchy with intermediate entities such as gateways and proxies.</li>
+339
+<li>WoT architecture should support accessing things in the local network from the outside of the local network (the internet or other local network), considering network address translation.</li>
+340
+</ul>
+341
+<h2 class="mume-header" id="application">Application</h2>
+342
+
+343
+<ul>
+344
+<li>WoT architecture should allow describing applications on the wide variety of things such as edge device, gateway, cloud and UI/UX device, using web standard technology based on the same model.</li>
+345
+</ul>
+346
+<h2 class="mume-header" id="legacy-adaption">Legacy adaption</h2>
+347
+
+348
+<ul>
+349
+<li>WoT architecture should allow mapping of legacy IP and non-IP protocols to web protocols, supporting wide variety of hierarchy, where such legacy protocols are terminated and translated.</li>
+350
+<li>WoT architecture should allow transparent use of existing IP protocols without translation, which follow RESTful architecture.</li>
+351
+</ul>
+352
+<h2 class="mume-header" id="security">Security</h2>
+353
+
+354
+<ul>
+355
+<li>WoT architecture should support multiple security mechanism commonly used in the web, such as Basic, Digest, Bearer and OAuth2.0.</li>
+356
+</ul>
+357
+
+358
+      </div>
+359
+
+360
+
+361
+
+362
+
+363
+
+364
+
+365
+
+366
+
+367
+
+368
+
+369
+
+370
+    </body></html>
